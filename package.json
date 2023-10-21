@@ -1,0 +1,27 @@
+{
+  "name": "avrasya",
+  "version": "1.0.6",
+  "description": "Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.",
+  "main": "dist/application.js",
+  "types": "src/application.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
+    "dev": "tsc && nodemon dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "web",
+    "server"
+  ],
+  "author": "Muhtalip Dede",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/node": "^20.8.7"
+  }
+}
