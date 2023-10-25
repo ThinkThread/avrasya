@@ -1,4 +1,5 @@
 import Router from './router';
+import Middleware from './middleware';
 
 declare module 'avrasya' {
     class Avrasya {
@@ -7,6 +8,7 @@ declare module 'avrasya' {
         env: string;
         router: Router;
         listen(port?: number | string): void;
+        middleware: Middleware;
     }
 
     export default Avrasya;

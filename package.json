@@ -1,6 +1,6 @@
 {
   "name": "avrasya",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.",
   "main": "dist/application.js",
   "types": "src/application.d.ts",
@@ -23,5 +23,13 @@
   },
   "dependencies": {
     "@types/node": "^20.8.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhtalipdede/avrasya.git"
+  },
+  "bugs": {
+    "url": "https://github.com/muhtalipdede/avrasya/issues"
+  },
+  "homepage": "https://github.com/muhtalipdede/avrasya#readme"
 }
