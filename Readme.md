@@ -4,6 +4,8 @@
   [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
   [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
 
+  <img src="./images/avrasya.png" alt="drawing" width="200"/>
+
 Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.
 
 ## Features
@@ -36,9 +38,20 @@ avrasya.router.get("/", (context) => {
     context.send("Hello World");
 });
 
-avrasya.middleware.add((context) => {
-    console.log("middleware");
+avrasya.use((context, next) => {
+    console.log("middleware1");
     console.log(context.req.url + " " + context.req.method);
+    next();
+})
+
+avrasya.use((context, next) => {
+    console.log("middleware2");
+    next();
+})
+
+avrasya.use((context, next) => {
+    console.log("middleware3");
+    next();
 })
 
 avrasya.listen(3000);

@@ -1,18 +1,15 @@
 {
-  "name": "basic-server",
+  "name": "basic-server-es6",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "tsc && node dist/index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Muhtalip Dede",
   "license": "ISC",
-  "devDependencies": {
-    "typescript": "^5.2.2"
-  },
   "dependencies": {
     "avrasya": "^1.0.11"
   }

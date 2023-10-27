@@ -1,3 +1,13 @@
-export function generateMiddlewareIndex() {
-    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+import ManneligContext from "../context";
+
+export function runMiddleware (context: ManneligContext, middlewares: Function[]) {
+  let currentMiddleware = 0;
+
+  function next() {
+    if (currentMiddleware < middlewares.length) {
+      currentMiddleware++;
+      middlewares[currentMiddleware - 1](context, next);
+    }
+  }
+  next();
 }

@@ -1,15 +1,14 @@
 import Router from './router';
-import Middleware from './middleware';
+import ManneligContext from './context';
 
 declare module 'avrasya' {
-    class Avrasya {
+    export class Avrasya {
         constructor();
         port: number;
         env: string;
         router: Router;
+        use(handler: (context: ManneligContext, next: () => void) => void): void;
         listen(port?: number | string): void;
-        middleware: Middleware;
     }
-
     export default Avrasya;
 }
