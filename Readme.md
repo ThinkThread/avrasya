@@ -81,6 +81,93 @@ npm install
 npm run start
 ```
 
+## Content Type Support
+
+### Serving CSS
+
+```javascript
+avrasya.router.get("/css", (context) => {
+    const css = `
+        body {
+            background-color: red;
+        }
+    `;
+    context.css(css);
+});
+```
+
+### Serving Javascript
+
+```javascript
+avrasya.router.get("/js", (context) => {
+    const js = `
+        console.log("Hello World");
+    `;
+    context.js(js);
+});
+```
+
+### Serving HTML
+
+```javascript
+avrasya.router.get("/html", (context) => {
+    const html = `
+        <h1>Hello World</h1>
+        <p>Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.</p>
+        <button>Click me</button>
+    `;
+    context.html(html);
+});
+```
+
+### Serving JSON
+
+```javascript
+avrasya.router.get("/json", (context) => {
+    const json = {
+        name: "Avrasya",
+        version: "1.0.13",
+        description: "Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility."
+    };
+    context.json(json);
+});
+```
+
+### Serving Plain Text
+
+```javascript
+avrasya.router.get("/text", (context) => {
+    const text = "Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.";
+    context.text(text);
+});
+```
+
+### Serving Files
+
+```javascript
+avrasya.router.get("/text", (context) => {
+    const text = "Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.";
+    context.text(text);
+});
+```
+
+### Serving Images
+
+```javascript
+avrasya.router.get("/image", (context) => {
+    const path = "avrasya.png";
+    context.file(path);
+});
+```
+
+### Redirecting
+
+```javascript
+avrasya.router.get("/redirect", (context) => {
+    context.redirect("https://www.google.com");
+});
+```
+
 ## Contribution Guidelines
 
 Thank you for considering contributing to this project! [CONTRIBUTING](/CONTRIBUTING.md)

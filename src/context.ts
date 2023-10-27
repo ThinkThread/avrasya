@@ -1,5 +1,6 @@
 import { IncomingMessage, ServerResponse } from "http";
 import url from "url";
+import fs from "fs";
 
 class ManneligContext {
     private path: string;
@@ -45,6 +46,53 @@ class ManneligContext {
     send(data: any) {
         this.res.writeHead(200, { 'Content-Type': 'application/json' });
         this.res.write(JSON.stringify(data));
+        this.res.end();
+    }
+
+    redirect(url: string) {
+        this.res.writeHead(302, { 'Location': url });
+        this.res.end();
+    }
+
+    json(data: any) {
+        this.res.writeHead(200, { 'Content-Type': 'application/json' });
+        this.res.write(JSON.stringify(data));
+        this.res.end();
+    }
+
+    html(data: any) {
+        this.res.writeHead(200, { 'Content-Type': 'text/html' });
+        this.res.write(data);
+        this.res.end();
+    }
+
+    css(data: any) {
+        this.res.writeHead(200, { 'Content-Type': 'text/css' });
+        this.res.write(data);
+        this.res.end();
+    }
+
+    js(data: any) {
+        this.res.writeHead(200, { 'Content-Type': 'application/javascript' });
+        this.res.write(data);
+        this.res.end();
+    }
+
+    text(data: any) {
+        this.res.writeHead(200, { 'Content-Type': 'text/plain' });
+        this.res.write(data);
+        this.res.end();
+    }
+
+    file(path: string) {
+        this.res.writeHead(200, { 'Content-Type': 'application/octet-stream' });
+        this.res.write(fs.readFileSync(path));
+        this.res.end();
+    }
+
+    fileStream(path: string) {
+        this.res.writeHead(200, { 'Content-Type': 'application/octet-stream' });
+        this.res.write(fs.createReadStream(path));
         this.res.end();
     }
 }

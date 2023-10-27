@@ -1,6 +1,6 @@
 {
   "name": "avrasya",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
