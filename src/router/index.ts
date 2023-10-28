@@ -1,5 +1,5 @@
 import { IncomingMessage, ServerResponse } from "http";
-import ManneligContext from "../context";
+import Context from "../context";
 
 class Router {
 
@@ -27,16 +27,16 @@ class Router {
             CONNECT: {},
         }
     }
-    get(path: string, handler: (context: ManneligContext) => void) {
+    get(path: string, handler: (context: Context) => void) {
         this.routes.GET[path] = function (req: IncomingMessage, res: ServerResponse) {
-            var context = new ManneligContext(req, res, path);
+            var context = new Context(req, res, path);
             handler(context);
         }
     }   
 
-    post(path: string, handler: (context: ManneligContext) => void) {
+    post(path: string, handler: (context: Context) => void) {
         this.routes.POST[path] = function (req: IncomingMessage, res: ServerResponse) {
-            var context = new ManneligContext(req, res, path);
+            var context = new Context(req, res, path);
             let body = '';
             req.once('data', chunk => {
                 body += chunk;
@@ -46,9 +46,9 @@ class Router {
         }
     }
 
-    put (path: string, handler: (context: ManneligContext) => void) {
+    put (path: string, handler: (context: Context) => void) {
         this.routes.PUT[path] = function (req: IncomingMessage, res: ServerResponse) {
-            var context = new ManneligContext(req, res, path);
+            var context = new Context(req, res, path);
             let body = '';
             req.once('data', chunk => {
                 body += chunk;
@@ -58,16 +58,16 @@ class Router {
         }
     }
 
-    delete (path: string, handler: (context: ManneligContext) => void) {
+    delete (path: string, handler: (context: Context) => void) {
         this.routes.DELETE[path] = function (req: IncomingMessage, res: ServerResponse) {
-            var context = new ManneligContext(req, res, path);
+            var context = new Context(req, res, path);
             handler(context);
         }
     }
 
-    patch (path: string, handler: (context: ManneligContext) => void) {
+    patch (path: string, handler: (context: Context) => void) {
         this.routes.PATCH[path] = function (req: IncomingMessage, res: ServerResponse) {
-            var context = new ManneligContext(req, res, path);
+            var context = new Context(req, res, path);
             let body = '';
             req.once('data', chunk => {
                 body += chunk;
@@ -77,23 +77,23 @@ class Router {
         }
     }
 
-    head (path: string, handler: (context: ManneligContext) => void) {
+    head (path: string, handler: (context: Context) => void) {
         this.routes.HEAD[path] = function (req: IncomingMessage, res: ServerResponse) {
-            var context = new ManneligContext(req, res, path);
+            var context = new Context(req, res, path);
             handler(context);
         }
     }
 
-    options (path: string, handler: (context: ManneligContext) => void) {
+    options (path: string, handler: (context: Context) => void) {
         this.routes.OPTIONS[path] = function (req: IncomingMessage, res: ServerResponse) {
-            var context = new ManneligContext(req, res, path);
+            var context = new Context(req, res, path);
             handler(context);
         }
     }
 
-    connect (path: string, handler: (context: ManneligContext) => void) {
+    connect (path: string, handler: (context: Context) => void) {
         this.routes.CONNECT[path] = function (req: IncomingMessage, res: ServerResponse) {
-            var context = new ManneligContext(req, res, path);
+            var context = new Context(req, res, path);
             handler(context);
         }
     }

@@ -1,15 +1,18 @@
 {
-  "name": "basic-server-es6",
+  "name": "file-based-routes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "./dist/index.js",
   "scripts": {
-    "start": "node index.js",
+    "build": "tsc",
+    "start": "tsc && node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Muhtalip Dede",
   "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
   "dependencies": {
     "avrasya": "^1.0.22"
   }

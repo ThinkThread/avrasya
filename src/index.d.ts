@@ -1,5 +1,5 @@
 import Router from './router';
-import ManneligContext from './context';
+import Context from './context';
 
 declare module 'avrasya' {
     export class Avrasya {
@@ -7,7 +7,7 @@ declare module 'avrasya' {
         port: number;
         env: string;
         router: Router;
-        use(handler: (context: ManneligContext, next: () => void) => void): void;
+        use(handler: (context: Context, next: () => void) => void): void;
         listen(port?: number | string): void;
     }
     export default Avrasya;

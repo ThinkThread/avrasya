@@ -2,7 +2,7 @@ import { IncomingMessage, ServerResponse } from "http";
 import url from "url";
 import fs from "fs";
 
-class ManneligContext {
+class Context {
     private path: string;
     req: IncomingMessage;
     res: ServerResponse;
@@ -96,4 +96,4 @@ class ManneligContext {
         this.res.end();
     }
 }
-export default ManneligContext;
+export default Context;

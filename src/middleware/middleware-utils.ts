@@ -1,6 +1,6 @@
-import ManneligContext from "../context";
+import Context from "../context";
 
-export function runMiddleware (context: ManneligContext, middlewares: Function[]) {
+export function runMiddleware (context: Context, middlewares: Function[]) {
   let currentMiddleware = 0;
 
   function next() {

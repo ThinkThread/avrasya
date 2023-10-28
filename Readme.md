@@ -57,6 +57,33 @@ avrasya.use((context, next) => {
 avrasya.listen(3000);
 ```
 
+##  File Based Routing
+
+```bash
+| src
+    | index.ts
+    | routes
+        | get.ts
+        | user
+            | get.ts
+            | [id]
+                | get.ts
+                | post.ts
+```
+
+### get.ts Example Handler
+
+```typescript
+import Context from "avrasya/src/context";
+const get = (context: Context) => {
+    context.send("Hello World");
+}
+
+export default get
+```
+
+See [Example](./examples/file-based-routes) for more details.
+
 ## Installation
 
 To get started with Avrasya, follow these simple installation steps:
