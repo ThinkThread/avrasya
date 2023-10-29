@@ -1,0 +1,26 @@
+{
+  "name": "prisma-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhtalip Dede",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "prisma": "5.5.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@prisma/client": "5.5.2",
+    "avrasya": "^1.0.22"
+  },
+  "prisma": {
+    "seed": "ts-node src/prisma/seed.ts"
+  }
+}

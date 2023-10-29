@@ -172,15 +172,6 @@ avrasya.router.get("/text", (context) => {
 ### Serving Files
 
 ```javascript
-avrasya.router.get("/text", (context) => {
-    const text = "Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.";
-    context.text(text);
-});
-```
-
-### Serving Images
-
-```javascript
 avrasya.router.get("/image", (context) => {
     const path = "avrasya.png";
     context.file(path);
