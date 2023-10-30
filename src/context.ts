@@ -43,6 +43,7 @@ class Context {
         }
     }
 
+    // TODO: This is same as the json method. Refactor
     send(data: any) {
         this.res.writeHead(200, { 'Content-Type': 'application/json' });
         this.res.write(JSON.stringify(data));
