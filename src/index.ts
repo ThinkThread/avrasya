@@ -41,9 +41,9 @@ export class Avrasya {
       } else if (file.endsWith('.js')) {
         const route = require(filePath);
         if (route.default) {
-          const pathWithoutDirectory = "/" + filePath.replace(this.routesDirectory, '').replace('/', '').replace('.js', '').replace('[', ':').replace(']', '');
+          const pathWithoutDirectory = '/' + filePath.replace(this.routesDirectory, '').replace('/', '').replace('.js', '').replace('[', ':').replace(']', '');
           const method = filePath.replace(directory, '').replace('.js', '').replace('/', '').toUpperCase();
-          const path = pathWithoutDirectory.replace("/" + method.toLowerCase(), '') || "/";
+          const path = pathWithoutDirectory.replace('/' + method.toLowerCase(), '') || '/';
           console.log(path, method);
           if (method === 'GET') {
             this.router.get(path, route.default);
