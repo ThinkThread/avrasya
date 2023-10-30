@@ -2,26 +2,25 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 import Router from './router';
-import Middleware from './middleware';
+import { Middleware, MiddlewareManager } from './middleware';
 import { matcher } from './router/route-utils';
 import Context from './context';
-import { runMiddleware } from './middleware/middleware-utils';
 
 export class Avrasya {
   port = process.env.PORT ?? 3000
   env = process.env.NODE_ENV ?? 'development'
   router: Router;
-  private middleware: Middleware;
+  private middlewareManager: MiddlewareManager;
   private routesDirectory: string;
 
   constructor() {
     this.router = new Router();
-    this.middleware = new Middleware();
+    this.middlewareManager = new MiddlewareManager();
     this.routesDirectory = path.resolve(process.cwd()) + '/dist/routes';
   }
 
-  use(handler: (context: Context, next: () => void) => void) {
-    this.middleware.add(handler);
+  use(handler: Middleware) {
+    this.middlewareManager.add(handler);
   }
 
   private checkRoutesDir() {
@@ -72,7 +71,7 @@ export class Avrasya {
         const handler = matcher(this.router, method, url);
         if (handler) {
           const context = new Context(req, res, url);
-          runMiddleware(context, this.middleware.middlewares);
+          this.middlewareManager.run(context);
           handler(req, res);
         } else {
           res.statusCode = 404;
