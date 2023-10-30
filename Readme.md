@@ -3,6 +3,16 @@
   [![NPM Version][npm-version-image]][npm-url]
   [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
   [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
+  [![Known Vulnerabilities](https://snyk.io/test/github/muhtalipdede/avrasya/badge.svg)](https://snyk.io/test/github/muhtalipdede/avrasya)
+  [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=bugs)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
+  [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
+  [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
+  [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
+  [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
+  [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
+  [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
+  [![CodeFactor](https://www.codefactor.io/repository/github/muhtalipdede/avrasya/badge)](https://www.codefactor.io/repository/github/muhtalipdede/avrasya)
+  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ff4e1c45beb34681b3b4f9946f369c2b)](https://app.codacy.com/gh/muhtalipdede/avrasya/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
   <img src="./images/avrasya.png" alt="drawing" width="200"/>
 
