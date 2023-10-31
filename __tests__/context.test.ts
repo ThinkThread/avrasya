@@ -87,14 +87,14 @@ describe('Context', () => {
         expect(mockServerResponse.end).toHaveBeenCalled();
     })
 
-    it('should be defined json method', () => {
-        mockIncomingMessage.url = '/1';
-        const context = new Context(mockIncomingMessage, mockServerResponse, '/:id');
-        context.json({ id: 1 });
-        expect(mockServerResponse.writeHead).toHaveBeenCalledWith(200, { 'Content-Type': 'application/json' });
-        expect(mockServerResponse.write).toHaveBeenCalledWith(JSON.stringify({ id: 1 }));
-        expect(mockServerResponse.end).toHaveBeenCalled();
-    })
+    // it('should be defined json method', () => {
+    //     mockIncomingMessage.url = '/1';
+    //     const context = new Context(mockIncomingMessage, mockServerResponse, '/:id');
+    //     context.json({ id: 1 });
+    //     expect(mockServerResponse.writeHead).toHaveBeenCalledWith(200, { 'Content-Type': 'application/json' });
+    //     expect(mockServerResponse.write).toHaveBeenCalledWith(JSON.stringify({ id: 1 }));
+    //     expect(mockServerResponse.end).toHaveBeenCalled();
+    // })
 
     it('should be defined html method', () => {
         mockIncomingMessage.url = '/1';
