@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 19
+          node-version: 19.0.0
 
       - name: Install dependencies
         run: npm install
@@ -27,19 +27,8 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      # - name: Test
-      #   run: npm run test
+      - name: Test
+        run: npm run test
 
-      # - name: Coverage
-      #   run: npm run test:coverage
-
-      - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args:
-            -Dsonar.organization=avrasya
-            -Dsonar.projectKey=avrasya
-            
+      - name: Coverage
+        run: npm run test:coverage
