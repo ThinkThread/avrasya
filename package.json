@@ -8,8 +8,8 @@
     "build": "tsc",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
-    "test": "jest --forceExit",
-    "test:coverage": "jest --coverage --forceExit"
+    "test": "jest --forceExit --detectOpenHandles",
+    "test:coverage": "jest --coverage --forceExit --detectOpenHandles"
   },
   "keywords": [
     "nodejs",

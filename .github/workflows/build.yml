@@ -6,7 +6,7 @@ on:
     types: [opened, synchronize, reopened]
 name: Main Workflow
 jobs:
-  sonarcloud:
+  avrasya-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
