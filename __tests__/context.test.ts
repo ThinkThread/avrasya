@@ -1,5 +1,5 @@
 import http from "http";
-import fs from "fs";
+// import fs from "fs";
 import Context from "../src/context";
 import { Socket } from "net";
 
