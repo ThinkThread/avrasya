@@ -3,21 +3,8 @@ import fs from "fs";
 import Context from "../src/context";
 import { Socket } from "net";
 
-jest.mock('http', () => {
-    return {
-        IncomingMessage: jest.fn(),
-        ServerResponse: jest.fn(() => ({
-            writeHead: jest.fn(),
-            write: jest.fn(),
-            end: jest.fn()
-        })),
-    };
-});
-
-jest.mock('fs', () => ({
-    readFileSync: jest.fn(),
-    createReadStream: jest.fn()
-}));
+jest.mock("http");
+jest.mock("fs");
 
 const { IncomingMessage, ServerResponse } = http;
 const mockIncomingMessage = new IncomingMessage(new Socket());

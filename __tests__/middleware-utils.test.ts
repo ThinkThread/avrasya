@@ -3,16 +3,7 @@ import { runMiddleware } from "../src/middleware/utils";
 import http from "http";
 import { Socket } from "net";
 
-jest.mock('http', () => {
-    return {
-        IncomingMessage: jest.fn(),
-        ServerResponse: jest.fn(() => ({
-            writeHead: jest.fn(),
-            write: jest.fn(),
-            end: jest.fn()
-        })),
-    };
-});
+jest.mock("http");
 
 const { IncomingMessage, ServerResponse } = http;
 const mockIncomingMessage = new IncomingMessage(new Socket());

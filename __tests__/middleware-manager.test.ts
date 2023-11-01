@@ -3,16 +3,7 @@ import http from "http";
 import { Socket } from "net";
 import { MiddlewareManager } from "../src/middleware";
 
-jest.mock('http', () => {
-    return {
-        IncomingMessage: jest.fn(),
-        ServerResponse: jest.fn(() => ({
-            writeHead: jest.fn(),
-            write: jest.fn(),
-            end: jest.fn()
-        })),
-    };
-});
+jest.mock('http');
 
 const { IncomingMessage, ServerResponse } = http;
 const mockIncomingMessage = new IncomingMessage(new Socket());
@@ -36,7 +27,7 @@ describe("Middleware Manager", () => {
             context.send("1");
             next();
         })
-        
+
         const context = new Context(mockIncomingMessage, mockServerResponse, '/');
         manager.run(context);
 
