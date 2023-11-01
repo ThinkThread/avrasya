@@ -23,7 +23,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
-    - run: npm test
     - run: npm run test:coverage
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
