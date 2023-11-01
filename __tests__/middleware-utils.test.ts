@@ -11,7 +11,7 @@ const mockServerResponse = new ServerResponse(mockIncomingMessage);
 
 describe("Middleware Utils", () => {
     it("should be defined run middleware", () => {
-        
+
         const middlewares = [];
         middlewares.push((context: Context, next: () => void) => {
             context.send("1");
