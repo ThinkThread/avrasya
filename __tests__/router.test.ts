@@ -2,24 +2,7 @@ import Avrasya from '../src';
 import http from "http";
 import { Socket } from "net";
 
-jest.mock('http', () => {
-    return {
-        createServer: jest.fn(),
-        IncomingMessage: jest.fn(() => ({
-            once: jest.fn((event, callback) => {
-                if (event === 'data') {
-                    callback(JSON.stringify({ data: 'hello' }));
-                }
-            }),
-        })),
-        ServerResponse: jest.fn(() => ({
-            writeHead: jest.fn(),
-            write: jest.fn(),
-            end: jest.fn()
-        })),
-    };
-});
-
+jest.mock('http');
 
 const { IncomingMessage, ServerResponse } = http;
 const mockIncomingMessage = new IncomingMessage(new Socket());
@@ -64,7 +47,7 @@ describe("Router", () => {
 
     it("should be defined POST method handler is defined", () => {
         const avrasya = new Avrasya();
-        
+
         avrasya.router.post("/", (context) => {
             context.send("hello");
         })
@@ -87,7 +70,7 @@ describe("Router", () => {
 
     it("should be defined PUT method handler is defined", () => {
         const avrasya = new Avrasya();
-        
+
         avrasya.router.put("/", (context) => {
             context.send("hello");
         })
@@ -110,7 +93,7 @@ describe("Router", () => {
 
     it("should be defined DELETE method handler is defined", () => {
         const avrasya = new Avrasya();
-        
+
         avrasya.router.delete("/", (context) => {
             context.send("hello");
         })
@@ -133,7 +116,7 @@ describe("Router", () => {
 
     it("should be defined PATCH method handler is defined", () => {
         const avrasya = new Avrasya();
-        
+
         avrasya.router.patch("/", (context) => {
             context.send("hello");
         })
@@ -156,7 +139,7 @@ describe("Router", () => {
 
     it("should be defined HEAD method handler is defined", () => {
         const avrasya = new Avrasya();
-        
+
         avrasya.router.head("/", (context) => {
             context.send("hello");
         })
@@ -179,7 +162,7 @@ describe("Router", () => {
 
     it("should be defined OPTIONS method handler is defined", () => {
         const avrasya = new Avrasya();
-        
+
         avrasya.router.options("/", (context) => {
             context.send("hello");
         })
@@ -202,7 +185,7 @@ describe("Router", () => {
 
     it("should be defined CONNECT method handler is defined", () => {
         const avrasya = new Avrasya();
-        
+
         avrasya.router.connect("/", (context) => {
             context.send("hello");
         })

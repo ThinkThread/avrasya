@@ -1,5 +1,17 @@
+const mockData = JSON.stringify({ foo: "bar" });
+
 const httpMock = {
-  IncomingMessage: jest.fn(),
+  createServer: jest.fn(),
+  IncomingMessage: jest.fn(function () {
+    this.bodyData = mockData;
+    return {
+      once: jest.fn((event, callback) => {
+        if (event === "data") {
+          callback(this.bodyData);
+        }
+      }),
+    };
+  }),
   ServerResponse: jest.fn(() => ({
     writeHead: jest.fn(),
     write: jest.fn(),
