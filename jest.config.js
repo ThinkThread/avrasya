@@ -5,4 +5,7 @@ module.exports = {
     '^.+\\.ts?$': 'ts-jest',
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  forceExit: true,
+  detectOpenHandles: true,
+  cache: false
 };
