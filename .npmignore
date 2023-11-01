@@ -2,3 +2,8 @@ examples
 .github
 images
 CONTRIBUTING.md
+coverage
+__tests__
+__mocks__
+.eslintrc.cjs
+CONTRIBUTING.md

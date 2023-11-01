@@ -12,8 +12,10 @@ export class Avrasya {
   router: Router;
   private middlewareManager: MiddlewareManager;
   private routesDirectory: string;
+  private server: http.Server;
 
   constructor() {
+    this.server = http.createServer();
     this.router = new Router();
     this.middlewareManager = new MiddlewareManager();
     this.routesDirectory = path.resolve(process.cwd()) + '/dist/routes';
@@ -65,7 +67,7 @@ export class Avrasya {
       port = this.port;
     }
     this.checkRoutesDir();
-    const server = http.createServer((req, res) => {
+    this.server = http.createServer((req, res) => {
       const { method, url } = req;
       if (method && url && this.router) {
         const handler = matcher(this.router, method, url);
@@ -82,9 +84,13 @@ export class Avrasya {
         res.end();
       }
     });
-    server.listen(port, () => {
+    this.server.listen(port, () => {
       console.log('Server listening on port ' + port);
     });
+  }
+
+  close() {
+    this.server.close();
   }
 }
 
