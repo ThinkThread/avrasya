@@ -1,6 +1,6 @@
 {
   "name": "avrasya",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
@@ -33,10 +33,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muhtalipdede/avrasya.git"
+    "url": "git+https://github.com/ThinkThread/avrasya.git"
   },
   "bugs": {
-    "url": "https://github.com/muhtalipdede/avrasya/issues"
+    "url": "https://github.com/ThinkThread/avrasya/issues"
   },
-  "homepage": "https://github.com/muhtalipdede/avrasya#readme"
+  "homepage": "https://avrasya.fly.dev",
+  "contributors": [
+    {
+      "name": "Muhtalip Dede",
+      "github": "https://github.com/muhtalipdede",
+      "twitter": "https://twitter.com/MuhtalipDede"
+    },
+    {
+      "name": "Harun Sokullu",
+      "github": "https://github.com/suphero",
+      "twitter": "https://twitter.com/suphero"
+    }
+  ]
 }

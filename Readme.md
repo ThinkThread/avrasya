@@ -4,18 +4,22 @@
   [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
   [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
   [![Known Vulnerabilities](https://snyk.io/test/github/muhtalipdede/avrasya/badge.svg)](https://snyk.io/test/github/muhtalipdede/avrasya)
-  [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=bugs)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
-  [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
-  [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
-  [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
-  [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
-  [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
-  [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=muhtalipdede_avrasya&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=muhtalipdede_avrasya)
+  [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ThinkThread_avrasya&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ThinkThread_avrasya)
+  [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ThinkThread_avrasya&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ThinkThread_avrasya)
+  [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ThinkThread_avrasya&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ThinkThread_avrasya)
+  [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ThinkThread_avrasya&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ThinkThread_avrasya)
+  [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ThinkThread_avrasya&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=ThinkThread_avrasya)
+  [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ThinkThread_avrasya&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=ThinkThread_avrasya)
+  [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ThinkThread_avrasya&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ThinkThread_avrasya)
   [![CodeFactor](https://www.codefactor.io/repository/github/muhtalipdede/avrasya/badge)](https://www.codefactor.io/repository/github/muhtalipdede/avrasya)
   [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ff4e1c45beb34681b3b4f9946f369c2b)](https://app.codacy.com/gh/muhtalipdede/avrasya/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+  [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ThinkThread_avrasya&metric=coverage)](https://sonarcloud.io/summary/new_code?id=ThinkThread_avrasya)
 
-  <img src="./images/avrasya.png" alt="drawing" width="200"/>
+  <img src="./images/avrasya.png" alt="drawing" width="200" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);" alt="Avrasya Logo"/>
 
+  <p align="center">
+   • <a href="https://avrasya.fly.dev">Official Website</a> •
+  </p>
 Avrasya is a fast and unique Node.js web framework designed for building web applications and APIs. Avrasya stands out with its simple usage, performance, and extensibility.
 
 ## Features
@@ -25,7 +29,6 @@ Avrasya is a fast and unique Node.js web framework designed for building web app
 - Middleware support
 - Extensibility
 - Open-source and free
-
 
 ## Getting Started
 
@@ -99,21 +102,25 @@ See [Example](./examples/file-based-routes) for more details.
 To get started with Avrasya, follow these simple installation steps:
 
 1. Clone the Repository:
+
 ```bash
 git clone https://github.com/muhtalipdede/avrasya.git
 ```
 
 2. Navigate to the Project Directory:
+
 ```bash
 cd avrasya
 ```
 
 3. Install Dependencies:
+
 ```bash
 npm install
 ```
 
 4. Start the Application:
+
 ```bash
 npm run start
 ```
@@ -200,10 +207,13 @@ avrasya.router.get("/redirect", (context) => {
 
 Thank you for considering contributing to this project! [CONTRIBUTING](/CONTRIBUTING.md)
 
+## Contributors
+
+Check out the list of contributors in the [CONTRIBUTORS](/CONTRIBUTORS.md) file.
+
 ## Issue Template
 
 If you want to report an issue or request a new feature, please use the following template. [ISSUE_TEMPLATE](/.github/ISSUE_TEMPLATE.md)
-
 
 ## License
 
